@@ -116,8 +116,8 @@ const Main = () => {
 
           {/* DatePicker */}
           {week?.id && (
-            <div className="grid place-items-center gap-4 p-6 rounded-lg border border-[#DDDDDD] bg-white space-y-4 ">
-              <div className="py-5 text-center space-y-2">
+            <div className="grid place-items-center gap-4 p-6 rounded-lg border border-[#DDDDDD] bg-white space-y-4 mb-0">
+              <div className="py-6 text-center space-y-2">
                 <p className="text-[15px] text-[#070012] uppercase ">
                   {week.week} weeks
                 </p>
@@ -126,7 +126,7 @@ const Main = () => {
                 </p>
               </div>
 
-              <div className="w-full flex gap-6 ">
+              <div className="w-full flex flex-col md:flex-row gap-6 ">
                 <CustomDateField
                   value={startDate}
                   onChange={setStartDate}
