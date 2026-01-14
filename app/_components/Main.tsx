@@ -26,7 +26,7 @@ const Main = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
   return (
     <>
-      <section className="">
+      <section className="mb-[150.5px] md:mb-[110.5px]">
         <div className="bg-gradient-to-t from-[#5D06E9]/20 via-[#1C1DF6]/10 to-transparent py-[96px] relative overflow-hidden">
           <Image
             className="absolute top-0 left-1/2 -translate-x-1/2 "
@@ -71,7 +71,7 @@ const Main = () => {
             </div>
 
             {/* Select */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {WEEK_PLAN.map((plan) => (
                 <button
                   onClick={() =>
@@ -176,15 +176,19 @@ const Main = () => {
         </div>
       </section>
       {/* Bottom */}
-      <div className="fixed bottom-0 left-0 container py-8 flex items-center justify-between gap-5">
-        <p className="font-semibold text-[#070012] uppercase ">
-          ${week?.price} for {week?.days} Days (1 Activity per Day)
-        </p>
-        <div className="flex gap-6 items-center">
-          <button className="btn">Back</button>
-          <button className="btn-primary">Next</button>
+      <section className="fixed bottom-0 left-0 bg-white z-20 w-full ">
+        <div className=" container py-8 flex flex-col md:flex-row gap-4 md:gap-5 items-center justify-between ">
+          <p className="font-semibold text-[#070012] uppercase ">
+            ${week?.price} for {week?.days} Days (1 Activity per Day)
+          </p>
+          <div className="flex gap-6 items-center">
+            <button className="btn uppercase text-[15px] font-semibold">
+              Back
+            </button>
+            <button className="btn-primary">Next</button>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

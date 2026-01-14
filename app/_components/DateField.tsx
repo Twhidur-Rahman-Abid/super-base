@@ -132,7 +132,7 @@ export default function WheelDatePicker({ value, onChange, label }: Props) {
             <div className="p-6 flex gap-3">
               <button
                 onClick={() => setOpen(false)}
-                className="flex-1 btn text-red-600 font-bold px-4"
+                className="flex-1 btn text-red-600 font-bold px-4 uppercase"
               >
                 Cancel
               </button>

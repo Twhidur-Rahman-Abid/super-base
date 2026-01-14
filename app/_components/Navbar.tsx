@@ -4,12 +4,14 @@ import Image from "next/image";
 import logo from "@/public/images/logo.png";
 import Link from "next/link";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const isActive = true;
 
   return (
-    <nav className="py-[32px] bg-white  sticky top-0 z-50">
+    <nav className="py-[32px] bg-white  sticky top-0 z-50 shadow-[0px_1px_4px_0px_rgba(0,0,0,0.08)]">
       <div className="container flex justify-between items-center">
         {/* Logo */}
         <Image src={logo} alt="super-base logo" />
@@ -17,17 +19,17 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-[48px] items-center">
           {/* Links */}
-          <div className="flex gap-6 items-center">
-            <Link href="/" className="nav-link">
+          <div className="flex gap-6 items-center text-[15px] font-semibold uppercase text-[#555555] [&_a]:hover:text-[#070012]">
+            <Link href="/" className="">
               Home
             </Link>
-            <Link href="/" className="nav-link">
+            <Link href="/" className={cn(" ", { "text-[#070012]": isActive })}>
               Programs & services
             </Link>
-            <Link href="/" className="nav-link">
+            <Link href="/" className="">
               About
             </Link>
-            <Link href="/" className="nav-link">
+            <Link href="/" className="">
               Contact
             </Link>
           </div>
@@ -66,17 +68,17 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden absolute top-full -mt-1 left-0 w-full bg-white shadow-lg">
-          <div className="flex flex-col gap-4 p-6">
-            <Link href="/" className="nav-link">
+          <div className="flex flex-col gap-4 p-6 text-[15px] font-semibold uppercase text-[#555555] [&_a]:hover:text-[#070012]">
+            <Link href="/" className="">
               Home
             </Link>
-            <Link href="/" className="nav-link active">
+            <Link href="/" className={cn(" ", { "text-[#070012]": isActive })}>
               Programs & services
             </Link>
-            <Link href="/" className="nav-link">
+            <Link href="/" className="">
               About
             </Link>
-            <Link href="/" className="nav-link">
+            <Link href="/" className="">
               Contact
             </Link>
 
