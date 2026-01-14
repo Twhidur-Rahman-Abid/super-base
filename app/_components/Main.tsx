@@ -56,7 +56,7 @@ const Main = () => {
                 />
               </svg>
 
-              <p className="text-[#555] font-light">
+              <p className="text-[15px] text-[#555] font-light">
                 Regular aftercare program
               </p>
             </div>
@@ -64,7 +64,7 @@ const Main = () => {
             <h2 className="text-2xl md:text-[32px] text-[#070012] font-medium">
               How many weeks you like to continue?
             </h2>
-            <p className="text-[#555] font-light">
+            <p className="text-[#555] font-light text-[15px]">
               Based on your selection Mon, Tue, Thu, Fri, Sat{" "}
             </p>
           </div>
@@ -103,7 +103,7 @@ const Main = () => {
                   )}
                 </div>
                 <div className="text-center space-y-2">
-                  <h5 className="text-[15px] font-medium text-[#070012] leading-3">
+                  <h5 className="text-[15px] font-medium text-[#070012] leading-3 uppercase">
                     {plan.week} week
                   </h5>
                   <p className="text-[13px] font-light text-[#555]">

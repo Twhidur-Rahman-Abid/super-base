@@ -70,7 +70,7 @@ const Navbar = () => {
             <Link href="/" className="nav-link">
               Home
             </Link>
-            <Link href="/" className="nav-link text-[#070012]">
+            <Link href="/" className="nav-link active">
               Programs & services
             </Link>
             <Link href="/" className="nav-link">

@@ -9,14 +9,17 @@
   }
 }
 .nav-link {
-  @apply text-[15px] text-[#555555] hover:text-black font-medium uppercase;
+  @apply text-[15px] text-[#555555] hover:text-black font-semibold uppercase;
+}
+.nav-link.active {
+  @apply text-[#070012];
 }
 .btn {
   @apply hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer;
 }
 
 .btn-primary {
-  @apply shadow-[0px_10px_10px_0px_rgba(102,93,170,0.2)] py-3 px-6 rounded-[4px] bg-gradient-to-tl from-[#5D06E9] to-[#0B23FA] text-[15px] font-semibold text-white hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer;
+  @apply shadow-[0px_10px_10px_0px_rgba(102,93,170,0.2)] py-3 px-6 rounded-[4px] bg-gradient-to-tl from-[#5D06E9] to-[#0B23FA] text-[15px] font-semibold uppercase text-white hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer;
 }
 
 .container {
